@@ -1,3 +1,5 @@
+# One line add ssh pub to remote
+cat ~/.ssh/id_rsa.pub | ssh user@hostname 'cat >> .ssh/authorized_keys'
 
 # Access a drive > 10 GB on a CloudPro Debian machine
 * pvscan && vgextend localhost-vg /dev/sda3 && lvextend -l +100%FREE /dev/localhost-vg/root && resize2fs /dev/localhost-vg/root 
